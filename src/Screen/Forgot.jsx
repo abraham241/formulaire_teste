@@ -37,7 +37,7 @@ function Forgot(){
                                 
                                 <div className="mb-6">
                                     <button
-                                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline drop-shadow-2xl"
+                                    className="bg-violet-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline drop-shadow-2xl"
                                     type="button"
                                     >
                                     <Link to={'/Reset'} className="text-white">

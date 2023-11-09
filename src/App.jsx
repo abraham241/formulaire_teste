@@ -4,6 +4,7 @@ import Login from "./Screen/Login";
 import Creation from "./Screen/Creation";
 import Forgot from "./Screen/Forgot";
 import Reset from "./Screen/Reset";
+import Dash from "./Screen/Dash";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path='/Reset' element={ <Reset/>}/>
         <Route path='/Creation' element={ <Creation/>}/>
         <Route path='/Forgot' element={ <Forgot/>}/>
+        <Route path='/Dash' element={ <Dash/>}/>
       </Routes>
     </BrowserRouter>
   )

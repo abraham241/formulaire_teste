@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 function Login(){
     return (
         <div className="flex justify-between">
-        <div className="flex justify-center items-center w-1/2">
-            <div className="flex items-center justify-center h-screen bg-white">
+        <div className="flex justify-center items-center w-1/2 md:w-full lg:w-1/2 sm:w-full ">
+            <div className="flex items-center justify-center h-screen bg-white sm:w-full">
                 <div className=" p-8 max-w-md w-full">
                     <div className="bg-blue-200 h-12 w-12 px-2 py-3  rounded font-bold text-sm text-blue-600">
                         E241
@@ -20,7 +20,7 @@ function Login(){
                         </p>
                     </div>
 
-                    <form>
+                    <form className="">
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold" htmlFor="email">
                             E-mail de Connexion
@@ -71,7 +71,7 @@ function Login(){
                                 Vous n'avez pas de compte?  
                                 {/* <span className="text-blue-600"><a href="/Creation">Créer un c'est gratui</a></span> */}
                             </p>
-                            <Link to={'./Creation'} className="text-violet-800">
+                            <Link to={'./Dash'} className="text-violet-800">
                                 C'est gratui
                             </Link>
                         </div>
@@ -81,7 +81,7 @@ function Login(){
         </div>
         
 
-        <div className="bg-[#5b21b6] w-1/2 flex justify-center items-center">
+        <div className="bg-[#5b21b6] w-1/2 flex justify-center items-center hidden xl:block lg:block">
             <div>
                 <div>
                     <img src={Group9}/>
