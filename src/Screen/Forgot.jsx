@@ -49,7 +49,7 @@ function Forgot(){
                                     <p>
                                         Je me souviens de mon mot de passe? 
                                     </p>
-                                    <Link to={'/'} className="text-white">
+                                    <Link to={'/'} className="text-violet-800">
                                         Connexion
                                     </Link>
                                 </div>
