@@ -40,7 +40,7 @@ function Forgot(){
                                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline drop-shadow-2xl"
                                     type="button"
                                     >
-                                    <Link to={'/'} className="text-violet-800">
+                                    <Link to={'/Reset'} className="text-white">
                                         Connexion
                                     </Link>
                                     </button>
@@ -49,7 +49,7 @@ function Forgot(){
                                     <p>
                                         Je me souviens de mon mot de passe? 
                                     </p>
-                                    <Link to={'/'} className="text-violet-800">
+                                    <Link to={'/'} className="text-white">
                                         Connexion
                                     </Link>
                                 </div>

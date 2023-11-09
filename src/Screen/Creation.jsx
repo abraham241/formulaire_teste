@@ -73,7 +73,7 @@ function Creation(){
                         </div>
                         <div class="mb-6">
                             <button
-                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
+                            class="bg-[#5b21b6] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
                             type="button"
                             >
                             Connexion

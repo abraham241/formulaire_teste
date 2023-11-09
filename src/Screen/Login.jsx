@@ -60,7 +60,7 @@ function Login(){
                         </div>
                         <div className="mb-6">
                             <button
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
+                            className="bg-[#5b21b6] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
                             type="button"
                             >
                             Connexion
@@ -81,7 +81,7 @@ function Login(){
         </div>
         
 
-        <div className="bg-violet-800 w-1/2 flex justify-center items-center">
+        <div className="bg-[#5b21b6] w-1/2 flex justify-center items-center">
             <div>
                 <div>
                     <img src={Group9}/>
