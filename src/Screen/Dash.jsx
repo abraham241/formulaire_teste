@@ -4,7 +4,7 @@ import Car from "../assets/images/Car.png";
 import Group from "../assets/images/Group.png";
 import Logout from "../assets/images/Logout.png";
 import tof from "../assets/images/tof.png"
-import Search from "../assets/images/Search.png"
+import { Link } from "react-router-dom";
 
 function Dash(){
     return(
@@ -33,10 +33,12 @@ function Dash(){
                             </div>
                         </div>
                         
-                        <div className="flex  gap-5 mt-56">
+                        <div className="flex  gap-5 mt-52 hover:bg-violet-800 p-1">
                             <img src={Logout} className="w-5 h-5"/>
                             <h1>
+                            <Link to={'/'} className="text-white">
                                 Deconnexion
+                            </Link>
                             </h1>
                         </div>
                     </div>

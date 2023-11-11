@@ -1,11 +1,28 @@
 import React from "react";
 import Group9 from "../assets/images/Group9.png"
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Login(){
+
+    const [data, setData] = useState({
+        email: "",
+        password:""
+    })
+
+    const handelChange = (event) => {
+        const {name, value} = event.target;
+        setData({...data, [name]: value});
+    }
+
+    const handelSubmit = (event) => {
+        event.preventDefault();
+        console.log(data)
+    }
+
     return (
         <div className="flex justify-between">
-        <div className="flex justify-center items-center w-1/2 md:w-full lg:w-1/2 sm:w-full ">
+        <div className="flex justify-center items-center w-1/2 md:w-full lg:w-1/2 sm: ">
             <div className="flex items-center justify-center h-screen bg-white sm:w-full">
                 <div className=" p-8 max-w-md w-full">
                     <div className="bg-blue-200 h-12 w-12 px-2 py-3  rounded font-bold text-sm text-blue-600">
@@ -20,15 +37,17 @@ function Login(){
                         </p>
                     </div>
 
-                    <form className="">
+                    <form onSubmit={handelSubmit} className="">
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold" htmlFor="email">
                             E-mail de Connexion
                             </label>
                             <input
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="email"
                             type="email"
+                            name="email"
+                            value={data.email}
+                            onChange={handelChange}
                             placeholder="Sapul@gmail.com"
                             />
                         </div>
@@ -43,8 +62,10 @@ function Login(){
                             </label>
                             <input
                             className="shadow appearance-none border rounded w-full py-2 px-3 placeholder:text-black placeholder:font-bold text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="password"
                             type="password"
+                            name="password"
+                            value={data.password}
+                            onChange={handelChange}
                             placeholder="............"
                             />
                         </div>
@@ -61,7 +82,8 @@ function Login(){
                         <div className="mb-6">
                             <button
                             className="bg-[#5b21b6] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
-                            type="button"
+                            type="submit"
+
                             >
                             Connexion
                             </button>
