@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Group91 from "../assets/images/Group91.png"
 import { Link } from "react-router-dom";
 
+
 function Forgot(){
+    // je declare une constante qui contien la donné du formulaire que je veux recueillire
+    const [data, setData] = useState({
+        email: "",
+    })
+
+    const handelChange = (event) => {
+        const {name, value} = event.target;
+        setData({...data, [name]: value});
+    }
+
+    const handelSubmit = (event) => {
+        event.preventDefault();
+        console.log(data)
+    }
+
+
+
+
     return (
         
             <div className="flex justify-between">
@@ -22,15 +41,17 @@ function Forgot(){
                                 </p>
                             </div>
 
-                            <form>
+                            <form onSubmit={handelSubmit}>
                                 <div className="mb-4">
                                     <label className="block text-gray-700 text-sm font-bold" htmlFor="email">
                                     E-mail
                                     </label>
                                     <input
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="email"
                                     type="email"
+                                    name="email"
+                                    value={data.email}
+                                    onChange={handelChange}
                                     placeholder="Sapul@gmail.com"
                                     />
                                 </div>
@@ -38,7 +59,7 @@ function Forgot(){
                                 <div className="mb-6">
                                     <button
                                     className="bg-violet-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline drop-shadow-2xl"
-                                    type="button"
+                                    type="submit"
                                     >
                                     <Link to={'/Reset'} className="text-white">
                                         Connexion
