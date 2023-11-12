@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Groupe10 from "../assets/Group10.png"
 import { Link } from "react-router-dom";
+import { data } from "autoprefixer";
+
 
 function Creation(){
+
+    cont [data, setData] = useState({
+        firstName: "",
+        lastName: "",
+        email:"",
+        password,
+    })
+
+    const handelChange = (event) =>{
+        const {name, value} =event.target
+        setData({...data,[name]:value });
+    }
+
+    const handelSubmit= (event) =>{
+        event.preventDefault();
+        console.log(data)
+    }
+
+
+
     return(
         <div class="flex justify-between">
         <div class="flex justify-center items-center w-1/2">
@@ -20,14 +42,16 @@ function Creation(){
                         </p>
                     </div>
 
-                    <form>
+                    <form onSubmit={handelSubmit}>
                         <div class="flex justify-between gap-8">
                             <label class="block text-gray-700 text-sm font-bold lex justify-between gap-8" htmlFor="email">
                                 Nom complet
                                 <div class="mb-4 flex justify-between gap-8">
                                     <input
                                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="first-name"
+                                    name="fistname"
+                                    value={data.firstName}
+                                    onChange={handelChange}
                                     type="text"
                                     placeholder="Nom"
                                     />
@@ -35,7 +59,10 @@ function Creation(){
                                     <input
                                     class="shadow appearance-none border rounded w-full  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     id="last-name"
-                                    type="email"
+                                    name="lastname"
+                                    value={data.lastName}
+                                    onChange={handelChange}
+                                    type="text"
                                     placeholder="Prénom"
                                     />
                                 </div>
@@ -48,7 +75,9 @@ function Creation(){
                             </label>
                             <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="email"
+                            name="email"
+                            value={data.email}
+                            onChange={handelChange}
                             type="email"
                             placeholder="Aureluis@rocketmail.com"
                             />
@@ -59,7 +88,9 @@ function Creation(){
                             </label>
                             <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 placeholder:text-black placeholder:font-bold text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="password"
+                            name="password"
+                            value={data.password}
+                            onChange={handelChange}
                             type="password"
                             placeholder="............"
                             />
@@ -74,7 +105,7 @@ function Creation(){
                         <div class="mb-6">
                             <button
                             class="bg-[#5b21b6] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
-                            type="button"
+                            type="submit"
                             >
                             Connexion
                             </button>

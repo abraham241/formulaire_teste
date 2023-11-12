@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 function Forgot(){
-    // je declare une constante qui contien la donné du formulaire que je veux recueillire
+    // je declare une constante qui contien la donné du formulaire que je veux recueillir
     const [data, setData] = useState({
         email: "",
     })

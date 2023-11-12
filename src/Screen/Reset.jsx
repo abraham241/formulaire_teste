@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Group11 from "../assets/images/Group11.png"
 import { Link } from "react-router-dom";
 
 function Reset(){
+    const [data, setData] = useState({
+        oldpassword:"",
+        newpassword:"",
+    })
+
+    const handelChange = (event) =>{
+        const {name, value} = event.target;
+        setData({...data,[name]: value});
+    }
+
+    const handelSubmit = (event) =>{
+        event.preventDefault();
+        console.log(data)
+    }
+
     return (
         <div class="flex justify-between">
         <div class="flex justify-center items-center w-1/2">
@@ -20,15 +35,17 @@ function Reset(){
                         </p>
                     </div>
 
-                    <form>
+                    <form onSubmit={handelSubmit}>
                         <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold" htmlFor="password">
                             nouveau Mot de passe 
                             </label>
                             <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 placeholder:text-black placeholder:font-bold text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="password"
                             type="password"
+                            name="oldpassword"
+                            value={data.oldpassword}
+                            onChange={handelChange}
                             placeholder=".............................."
                             />
                         </div>
@@ -38,8 +55,10 @@ function Reset(){
                             </label>
                             <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 placeholder:text-black placeholder:font-bold text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="password"
                             type="password"
+                            name="newpassword"
+                            value={data.newpassword}
+                            onChange={handelChange}
                             placeholder=".............................."
                             />
                         </div>
@@ -47,7 +66,7 @@ function Reset(){
                         <div class="mb-6">
                             <button
                             class="bg-violet-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
-                            type="button"
+                            type="submit"
                             >
                             
                             <Link to={'/'} className="text-withe">

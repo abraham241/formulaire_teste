@@ -92,8 +92,8 @@ function Login(){
                                 Vous n'avez pas de compte?  
                                 {/* <span className="text-blue-600"><a href="/Creation">Créer un c'est gratui</a></span> */}
                             </p>
-                            <Link to={'./Dash'} className="text-violet-800">
-                                C'est gratui
+                            <Link to={'./Creation'} className="text-violet-800">
+                                    Connectez vous
                             </Link>
                         </div>
                     </form>
